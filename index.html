@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PharmaCare Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Bouton Hamburger -->
+  <button class="hamburger" id="hamburgerBtn">☰</button>
+
+<!-- Overlay pour quand la sidebar est ouverte -->
+<div class="overlay" id="overlay"></div>
+
+  <!-- Overlay pour quand la sidebar est ouverte -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <nav class="navbar">
+      <h2 class="logo">💊 PharmaCare</h2>
+      <ul class="nav-link">
+        <a href="index.html" class="active">Tableau de bord</a>
+        <a href="paiement.html">Paiements</a>
+        <a href="profil.html">Profil</a>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <header class="header">
+      <h1>Tableau de bord</h1>
+      <p>Aperçu de vos ventes et activités récentes</p>
+      <div class="user">
+        <span>👩🏽‍⚕️ <strong>Keren Matuli</strong></span>
+        <button class="logout">Déconnexion</button>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="card">
+        <h3>Revenus mensuels</h3>
+        <p class="value">$1,250</p>
+        <p class="trend down">▼ -5% depuis le mois dernier</p>
+      </div>
+      <div class="card">
+        <h3>Total annuel</h3>
+        <p class="value">$14,800</p>
+        <p class="trend up">▲ +12% depuis 2024</p>
+      </div>
+      <div class="card">
+        <h3>Ordonnances préparées</h3>
+        <p class="value">86</p>
+      </div>
+      <div class="card">
+        <h3>Clients uniques</h3>
+        <p class="value">54</p>
+      </div>
+    </section>
+    <section class="charts">
+      <div class="card chart">
+        <h3>Revenus mensuels</h3>
+        <div class="revenue-box">
+          <p class="value">$1,250</p>
+          <p class="trend down">▼ -5% depuis le mois dernier</p>
+        </div>
+        <canvas id="monthlyRevenueChart" height="150"></canvas>
+      </div>
+      <div class="card chart">
+        <h3>Produits les plus vendus</h3>
+        <div class="fake-bars">
+          <div><span>Paracétamol</span><div class="bar bar1"></div></div>
+          <div><span>Vitamine C</span><div class="bar bar2"></div></div>
+          <div><span>Crème antiseptique</span><div class="bar bar3"></div></div>
+          <div><span>Masques médicaux</span><div class="bar bar4"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <div class="card">
+        <h3>Transactions récentes</h3>
+        <ul class="transactions">
+          <li><span>Jean B.</span><span>Paracétamol</span><span>$12</span></li>
+          <li><span>Hervé M.</span><span>Vitamine C</span><span>$8</span></li>
+          <li><span>Belotti W.</span><span>Crème antiseptique</span><span>$15</span></li>
+          <li><span>Elie H.</span><span>Masques médicaux</span><span>$20</span></li>
+          <li><span>Eldad P.</span><span>Doliprane</span><span>$10</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Produits populaires</h3>
+        <ul class="popular">
+          <li><span>Paracétamol</span><span>18 ventes</span></li>
+          <li><span>Vitamine C</span><span>14 ventes</span></li>
+          <li><span>Crème antiseptique</span><span>12 ventes</span></li>
+          <li><span>Masques médicaux</span><span>9 ventes</span></li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <p>© 2025 PharmaCare — Dashboard moderne et responsive</p>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script src="pharma.js"></script>
+</body>
+</html>
 
